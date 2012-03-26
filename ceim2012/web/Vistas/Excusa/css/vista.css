@@ -1,0 +1,163 @@
+/* 
+    Document   : vista
+    Created on : 20-sep-2011, 11:00:39
+    Author     : peter
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+/** BASIC */
+fieldset{ border-radius:7px; -moz-border-radius:7px; -ms-border-radius:7px; -khtml-border-radius: 7px; behavior: url(PIE.htc); min-width: 320px; max-width: 320px; width: 320px;}
+legend{font-weight: bold;}
+
+#login{width: 150px; min-width:  150px; max-width:  150px;}
+
+#docente{float: right; font-weight: bold}
+#formContainerExcusas{width: 670px; border-radius:7px; -moz-border-radius:7px; -ms-border-radius:7px; -khtml-border-radius: 7px; behavior: url(PIE.htc); margin: 5px auto 5px 10px;}
+#consulta{margin: 0 0 0 23px;}
+#opciones{float: left; width: 200px; min-width: 200px; max-width: 200px;}
+
+#resultEstudiante{overflow: scroll; height: 200px; width: 440px; margin: 0 0 0 23px;}
+
+table { margin: 5px 0 10px 0; border-collapse: collapse; border: 2px silver inset;}
+table tr th   { padding: 2px;}
+table tr td {border-bottom: 2px silver inset; font-size: 9pt; text-align: center; min-width: 100px; width: 100px; max-width: 100px; height: 30px;}
+thead {background-color: #c3d8ba; text-align: center; font-size: 10pt; border: 2px silver inset;}
+
+.select{opacity: 0.5;filter: alpha(opacity=50);}
+.select:hover{opacity: 1;filter: alpha(opacity=100);}
+.select:active {background-color: rgba(153,153,153,0.5);opacity: 1;filter: alpha(opacity=100);}
+#datosEstudiante{margin: 0 0 0 23px;}
+#contentform{width: 340px; border-color: #c3d8ba; border-radius:7px; -moz-border-radius:7px; -ms-border-radius:7px; -khtml-border-radius: 7px; box-shadow: 0px 0px 5px black;-khtml-box-shadow: 0px 0px 5px black; -webkit-box-shadow: 0px 0px 5px black; -moz-box-shadow: 0px 0px 5px black; behavior: url(PIE.htc); margin: 5px auto 5px 23px;}
+#contentform2{margin: 0 0 0 33px;}
+#volver{opacity: 0.5;filter: alpha(opacity=50);}
+#volver:hover{opacity: 1;filter: alpha(opacity=100);}
+#volver:active {background-color: rgba(153,153,153,0.5);opacity: 1;filter: alpha(opacity=100);}
+
+#botones{margin: 0 0 15px 5px;}
+
+body {
+    margin: 0;
+    padding: 0;
+    /**background: gainsboro url(images/img01.gif) repeat left top;*/
+    font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color:#e6eed3;
+    text-align: justify;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    padding-top: 0;
+    color: #008BD1;
+    font:normal small Arial;
+}
+
+a {
+    color: #008BD1;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/** HEADER */
+
+#header {
+    width: 700px;
+    height: 250px;
+    margin: 0 auto;
+    /*background: url(images/img02.png) no-repeat left top;*/
+}
+
+#header h1 {
+    margin: 0;
+    padding: 10px 0 0 5px;
+    font-size: 40px;
+    letter-spacing: -2px;
+    color:gainsboro;
+    font-family: gill;
+}
+.contenedorSlider{
+    margin: 0;
+    padding: 0px 0 0 0;
+}
+
+#header h2 {
+    display: none;
+}
+
+/** MENU */
+
+#menu {
+    width: 700px;
+    height: 30px;
+    margin: 0 auto 0px auto;
+    background-color:  #c3d8ba;
+    /*background: url(images/img02.png) no-repeat left top;*/
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+}
+
+#menu ul li {
+    display: inline;
+}
+
+#menu a {
+
+    padding: 0 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+#menu a:hover {
+    color:#9fdb91; 
+    font-size: 20px;
+}
+
+
+
+/** CONTENT */
+
+#content {
+    width: 700px;
+    margin: 0 auto 1em auto;
+    background: #FFFFFF url(images/img05.gif) no-repeat left bottom;
+}
+
+#content * {
+    line-height: 140%;
+}
+
+#columnA {
+    float: left;
+    width: 430px;
+    padding: 25px 20px 0 30px;
+    /*background: url(images/img03.gif) no-repeat left top;*/
+}
+
+#columnB {
+    float: right;
+    width: 190px;
+    padding: 25px 20px 0 10px;
+    /*background: url(images/img04.gif) no-repeat right top;*/
+}
+
+/** FOOTER */
+
+#footer {
+    text-align: center;
+    font-size: 11px;
+    color: #aaa;
+}

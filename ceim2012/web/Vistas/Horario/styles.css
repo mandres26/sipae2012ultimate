@@ -1,0 +1,292 @@
+/*
+Design by Metamorphosis Design
+http://www.metamorphozis.com
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+*
+{
+margin: 0px;
+padding: 0px;
+}
+
+a:link {
+	color: #A5A9B2;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #FF0000;
+}
+
+a:visited {
+	color: #A5A9B2;
+}
+
+body {
+	
+	background: #ffffff url(images/back_all.jpg) repeat-x;
+	font: 13px Arial, Helvetica, sans-serif;
+	color: #383838;
+	margin-top: 20px;
+}
+
+#content
+{
+	margin: 0 auto;
+	width: 791px;
+	text-align: left;
+}
+
+#main
+{
+width: 771px;
+background: #F1F1F1 url(images/top1.gif) no-repeat top;
+padding: 10px;
+}
+
+#back
+{
+width: 791px;
+}
+
+#header {
+	height: 276px;
+	text-align: right;
+	background: url(images/header.jpg) no-repeat;		
+}
+
+
+#logo {
+
+width: 771px;
+height: 162px;
+text-align: left;
+padding-top: 20px;
+padding-left: 20px;
+}
+
+
+#logo a {
+	text-decoration: none;
+	text-transform: lowercase;
+	font-style: italic;
+	font-size: 18px;
+	color: #ffffff;
+}
+#logo H2 a
+{
+font-size: 12px;
+}
+
+
+#menu1
+{
+width: 751px;
+height: 52px;
+padding-left: 40px;
+padding-top: 20px;
+background: url(images/buttons.jpg) no-repeat;
+}
+
+#menu ul {
+	list-style: none;	
+}
+
+#menu li {
+	
+	display: inline; 
+	
+}
+
+#menu a {
+	float: left;
+	width: 139px;
+	height: 32px;
+    display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+#menu a:hover {
+	width: 139px;
+    height: 32px;
+	color: #ff0000;
+	text-decoration: underline;
+}
+
+
+
+
+#right
+{
+	width: 247px;
+	float: right;
+}
+
+#right H3
+{
+width: 222px;
+height: 24px;
+font-size: 14px;
+font-weight: bold;
+padding-left: 25px;
+padding-top: 12px;
+text-transform: uppercase;
+color: #ffffff;
+background: url(images/title.gif) repeat-x
+}
+
+#right ul {
+	list-style: none;
+	margin-bottom: 10px;
+	background: url(images/title_back.gif) no-repeat top;
+}
+
+
+
+#right li  {
+	padding: 10px;
+}
+
+#right a {
+	color: #208A06;
+}
+#right a:visited {
+	color: #208A06;
+}
+
+#right p
+{
+font-size: 10px;
+}
+
+.bot
+{
+padding: 10px;
+}
+
+#calendar1 {
+	padding: 20px 10px 20px 10px;
+}
+
+#calendar table {
+	width: 100%;
+	text-align: center;
+}
+
+#calendar thead {
+
+}
+
+#calendar tbody td {
+	border: 1px solid #F1F1F1;
+}
+
+#calendar #prev {
+	text-align: left;
+}
+
+#calendar #next {
+	text-align: right;
+}
+
+#calendar tfoot a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#calendar #now {
+	background: #696969;
+	border: 1px solid #ff0000;
+	font-weight: bold;
+	color: #ffffff
+}
+
+#left
+{
+width: 490px;
+padding: 10px;
+}
+
+#left H4
+{
+	margin: 0;
+	padding: 0px;
+	font-size: 12px;
+	color: #208A06;
+}
+
+#left a
+{
+color: #208A06;
+text-decoration: none;
+}
+
+#left p {
+	margin: 5px;
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+#left h2 {
+	margin: 0;
+	padding: 0;
+	padding-top: 10px;
+	color: #208A06;
+}
+.date {
+	text-align: right;
+	color: #208A06;
+	font-size: 11px;
+}
+
+.date a {
+	color: #208A06;
+}
+
+.date2 {
+	float: left;
+	width: 73px;
+	height: 62px;
+	padding-top: 15px;
+	background: url(images/date.gif) no-repeat;
+	line-height: normal;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.date2 b {
+	display: block;
+	margin-top: 5px;
+	font-size: 40px;
+	color: #000000;
+}
+
+
+#footer {
+	height: 160px;
+	clear: both;
+	padding-top: 60px;
+	background: url(images/EscudoMediano.jpg) no-repeat top;
+}
+
+
+
+#footer p {
+	margin: 0;
+	font-size: 10px;
+	text-align: center;
+	color: #333333;
+}
+
+#footer a {
+	color: #333333;
+}
