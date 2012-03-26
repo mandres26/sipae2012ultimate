@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="certificadoEstudio" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codEstudiante" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+    e.nomEstudiante, e.apellidos
+FROM
+     estudiante e, curso c, matricula m
+where m.var_id_estudiante= e.codEstudiante and m.var_id_curso = c.codCurso and e.codEstudiante = $P{codEstudiante}]]>
+	</queryString>
+	<field name="nomEstudiante" class="java.lang.String"/>
+	<field name="apellidos" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="143" splitType="Stretch">
+			<staticText>
+				<reportElement x="146" y="65" width="384" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRE - ESCOLAR Y PRIMARIA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="147" y="119" width="383" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="146" y="88" width="384" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Licencia de Funcionamiento N° 0569 Nit 900317153-1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="10" width="384" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="19"/>
+				</textElement>
+				<text><![CDATA[CENTRO EDUCATIVO INTEGRAL MODERNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="146" y="43" width="384" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liderazgo, Emprendimiento  Y Autonomia]]></text>
+			</staticText>
+			<line>
+				<reportElement x="147" y="123" width="383" height="1"/>
+			</line>
+			<image>
+				<reportElement x="0" y="10" width="230" height="133"/>
+				<imageExpression><![CDATA["C:\\Users\\josedavo\\Desktop\\proyect28-11-11\\proyecto11-22\\proyecto\\Modulo_Boletines\\web\\Reportes\\Escudo Mediano.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="37"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PAZ Y SALVO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="290" splitType="Stretch">
+			<staticText>
+				<reportElement x="24" y="52" width="401" height="20"/>
+				<textElement>
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[El Centro Educativo Integral Moderno hace constar que, el Estudiante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="72" width="275" height="20"/>
+				<textElement>
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[Se encuentra a paz y salvo por todo concepto.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="27" y="72" width="130" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomEstudiante}]]></textFieldExpression>
+			</textField>
+			<line direction="BottomUp">
+				<reportElement stretchType="RelativeToTallestObject" x="28" y="245" width="195" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="27" y="266" width="528" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="13" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Rector(a)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="246" width="528" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="13" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Maria Ramos Rios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="143" width="125" height="20"/>
+				<textElement>
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[Dado en Cartagena]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="25" y="194" width="530" height="20"/>
+				<textElement>
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[En constancia Firma:]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="150" y="143" width="405" height="20"/>
+				<textElement>
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="146" y="72" width="122" height="20"/>
+				<textElement>
+					<font fontName="Calibri" size="14" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="18" width="555" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[Direccion: Providencia diagonal 32 A # 71-25 Telefono: 6636527 - 3116597614]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="65" width="279" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[Cartagena De Indias - Colombia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="45" width="279" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[E-mail: ceim509@hotmail.com]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

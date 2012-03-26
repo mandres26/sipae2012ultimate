@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="boletinReport_subreport1" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codEstudiante" class="java.lang.Integer"/>
+	<parameter name="codAsignatura" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select  distinct l.nombre from matricula m,curso c,estudiante e,actividades a,logros l,actividadlogros al,notaactividadmatricula nam,asignatura asig,horario h
+where m.var_id_matricula=nam.var_codigo_matricula
+and a.idActividades=nam.var_codigo_actividad
+and a.codAsignatura=asig.codAsignatura
+and a.idActividades=al.codActividad
+and l.codLogro=al.codLogros
+and m.var_id_estudiante=e.codEstudiante
+and m.var_id_curso=c.codCurso
+and h.var_id_cursoFK=c.codCurso
+and h.var_id_AsignaturaFK=a.codAsignatura
+and m.var_id_estudiante=$P{codEstudiante}
+and asig.codAsignatura=$P{codAsignatura}]]>
+	</queryString>
+	<field name="nombre" class="java.lang.String"/>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="328" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

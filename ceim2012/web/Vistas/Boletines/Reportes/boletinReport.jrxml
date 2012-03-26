@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="boletinReport" language="groovy" pageWidth="842" pageHeight="1200" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="26"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#C3CFD9">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#E6F3FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="dataset1"/>
+	<subDataset name="Table Dataset 1"/>
+	<subDataset name="Table Dataset 2"/>
+	<subDataset name="New Dataset 1">
+		<queryString language="SQL">
+			<![CDATA[SELECT a.nombreAsig, e.codEstudiante
+FROM matricula m, asignatura a, Horario h, curso c, estudiante e
+WHERE  m. var_id_estudiante = e.codEstudiante AND
+m.var_id_curso= c.codCurso AND
+h.var_id_AsignaturaFK = a.codAsignatura AND
+h.var_id_cursoFK= c.codCurso AND
+e.codEstudiante =9217106]]>
+		</queryString>
+		<field name="nombreAsig" class="java.lang.String"/>
+		<field name="codEstudiante" class="java.lang.Integer"/>
+	</subDataset>
+	<parameter name="codEstudiante" class="java.lang.Integer"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Documents and Settings\\Usuario\\Escritorio\\proyecto23-11\\proyecto11-22\\proyecto\\Modulo_Boletines\\web\\Reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="periodo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select  distinct asig.nombreAsig,asig.int_horaria,asig.codAsignatura,e.nomEstudiante,e.apellidos,c.nombre nomcurso from matricula m,curso c,estudiante e,actividades a,logros l,actividadlogros al,notaactividadmatricula nam,asignatura asig,horario h
+where m.var_id_matricula=nam.var_codigo_matricula
+and a.idActividades=nam.var_codigo_actividad
+and a.codAsignatura=asig.codAsignatura
+and a.idActividades=al.codActividad
+and l.codLogro=al.codLogros
+and m.var_id_estudiante=e.codEstudiante
+and m.var_id_curso=c.codCurso
+and h.var_id_cursoFK=c.codCurso
+and h.var_id_AsignaturaFK=a.codAsignatura
+and m.var_id_estudiante=$P{codEstudiante}]]>
+	</queryString>
+	<field name="nombreAsig" class="java.lang.String"/>
+	<field name="int_horaria" class="java.lang.String"/>
+	<field name="codAsignatura" class="java.lang.Integer"/>
+	<field name="nomEstudiante" class="java.lang.String"/>
+	<field name="apellidos" class="java.lang.String"/>
+	<field name="nomcurso" class="java.lang.String"/>
+	<title>
+		<band height="143" splitType="Stretch">
+			<staticText>
+				<reportElement x="178" y="28" width="483" height="31"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="19"/>
+				</textElement>
+				<text><![CDATA[CENTRO EDUCATIVO INTEGRAL MODERNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="61" width="483" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Liderazgo, Emprendimiento  Y Autonomia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="83" width="483" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRE - ESCOLAR Y PRIMARIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="106" width="483" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Licencia de Funcionamiento N° 0569 Nit 900317153-1]]></text>
+			</staticText>
+			<line>
+				<reportElement x="218" y="132" width="423" height="1"/>
+			</line>
+			<line>
+				<reportElement x="218" y="136" width="423" height="1"/>
+			</line>
+			<image isUsingCache="false">
+				<reportElement x="2" y="27" width="166" height="105"/>
+				<imageExpression><![CDATA["Escudo Mediano.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="57" y="0" width="69" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ESTUDIANTE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="22" width="42" height="20"/>
+				<textElement/>
+				<text><![CDATA[CURSO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[CODIGO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="22" width="57" height="20"/>
+				<textElement/>
+				<text><![CDATA[PERIODO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="589" y="0" width="71" height="20"/>
+				<textElement/>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="589" y="22" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[N° DE LISTA:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="660" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{codEstudiante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="2" width="92" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nomEstudiante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="218" y="2" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="22" width="65" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nomcurso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="24" width="100" height="18"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{periodo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22">
+			<staticText>
+				<reportElement x="57" y="0" width="111" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ASIGNATURA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="0" width="23" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[N/S]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="0" width="25" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ins]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="218" y="0" width="340" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fortalezas Y/O Dificultades Academicas Y Aptitudes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="558" y="0" width="31" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Per1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="589" y="2" width="33" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Per2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="622" y="0" width="31" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Per3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="653" y="0" width="30" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Per4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="683" y="0" width="42" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="725" y="2" width="77" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESEMPEÑO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="95" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="-3" width="801" height="1"/>
+			</line>
+			<subreport>
+				<reportElement x="216" y="0" width="342" height="91"/>
+				<subreportParameter name="codEstudiante">
+					<subreportParameterExpression><![CDATA[$P{codEstudiante}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="codAsignatura">
+					<subreportParameterExpression><![CDATA[$F{codAsignatura}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["boletinReport_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="57" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nombreAsig}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="560" y="0" width="123" height="91"/>
+				<subreportParameter name="codEstudiante">
+					<subreportParameterExpression><![CDATA[$P{codEstudiante}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="codAsignatura">
+					<subreportParameterExpression><![CDATA[$F{codAsignatura}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["boletinReport_subreport2.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="57" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{codAsignatura}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="287">
+			<staticText>
+				<reportElement x="57" y="208" width="93" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="13" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Maria Ramos Rios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="58" y="228" width="92" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="13" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Rector(a)]]></text>
+			</staticText>
+			<line>
+				<reportElement x="31" y="207" width="201" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="589" y="207" width="93" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="13" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="588" y="228" width="92" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="13" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Coordinador(a) Academica]]></text>
+			</staticText>
+			<line>
+				<reportElement x="518" y="206" width="207" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="45" y="15" width="81" height="20"/>
+				<textElement/>
+				<text><![CDATA[Observaciones:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="128" y="20" width="462" height="129"/>
+			</rectangle>
+			<line>
+				<reportElement x="127" y="62" width="462" height="1"/>
+			</line>
+			<line>
+				<reportElement x="128" y="93" width="461" height="1"/>
+			</line>
+			<line>
+				<reportElement x="128" y="121" width="461" height="1"/>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="181" y="35" width="464" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[E-mail: ceim509@hotmail.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="45" width="464" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[Cartagena De Indias - Colombia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="15" width="464" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[  Direccion: Providencia diagonal 32 A # 71-25 Telefono: 6636527 - 3116597614]]></text>
+			</staticText>
+			<line>
+				<reportElement x="203" y="7" width="423" height="2"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>
