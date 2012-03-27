@@ -1,0 +1,15 @@
+Aqui se encuentra toda la informacion donde se alojo la base de datos
+
+textualmente como nos comentaron se los pongo.
+
+Nombre de la BD: isc_sipae
+Usuario: isc_ceim
+contraseña: /*S1p43BD*/
+la url de coneccion deberia ser esta para sqlyog la ultilizan asi: iscsas.net/isc_sipae
+
+
+Cualquier duda me pueden escribir al correo o al grupo ceim, 
+
+==================================================
+
+NOTA: Creo que esta demás decir que cualquier actividad sospechosa contra el hosting sera causante de bloqueo del acceso, ya que este es un hosting corporativo.
