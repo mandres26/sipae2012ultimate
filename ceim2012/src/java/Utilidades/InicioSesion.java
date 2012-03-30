@@ -60,7 +60,7 @@ public class InicioSesion extends HttpServlet {
                      request.getSession().setAttribute("usuario", usuario);
                      request.getSession().setAttribute("pass", pass);
                      request.getSession().setAttribute("tipo", tipo);
-                     response.sendRedirect("GestionAdministrador.jsp");
+                     response.sendRedirect("../../GestionAdministrador.jsp");
                  }else{
                  usuarioNoEncontrado(request,response);
                  }
@@ -103,7 +103,7 @@ public class InicioSesion extends HttpServlet {
            
            request.getSession().setAttribute("info", "usuario o contraseña incorrectos");
            
-                        response.sendRedirect("http://localhost:8080/SisAcademico/");
+                        response.sendRedirect("../../index.jsp");
         } catch (IOException ex) {
             Logger.getLogger(InicioSesion.class.getName()).log(Level.SEVERE, null, ex);
         }

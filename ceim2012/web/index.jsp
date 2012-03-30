@@ -57,13 +57,7 @@ ddsmoothmenu.init({
   (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
 
 </script>
-<script>
-function cerrarPopup(pid)
-   {
-      document.getElementById(pid).style.visibility = 'hidden';      
-   }
-   
-</script>  
+  
 </head>
 <%
          String info=(String)request.getSession().getAttribute("info");
@@ -80,7 +74,7 @@ function cerrarPopup(pid)
              <jsp:forward page="docenteVista.jsp"></jsp:forward>
             <%
             }if(tipo.equalsIgnoreCase("3")){%>
-             <jsp:forward page="administradorVIsta.jsp"></jsp:forward>
+             <jsp:forward page="GestionAdministrador.jsp"></jsp:forward>
             <%
         }
         }
@@ -103,9 +97,7 @@ function cerrarPopup(pid)
 <div class="topbox">
 <h2>Imformacion</h2>
 <p>Si es Acudiente por favor registrese <a href="Vistas/Matricula/Racu.jsp">AQUI</a> para inscribir a el estudiante</p>
-<div id="popup">
-   <p>Soy un popup flotante. puedes <a href="javascript: cerrarPopup('popup');">cerrarme</a> si quieres</p>
-</div>
+
 </div>
 <div class="topbox last">
         <h2>Login </h2>
