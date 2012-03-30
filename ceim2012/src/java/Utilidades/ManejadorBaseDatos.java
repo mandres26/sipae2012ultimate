@@ -6,7 +6,7 @@ import java.util.logging.*;// libreria para trabajar con logger
 
 public class ManejadorBaseDatos {
     private Connection conexion; // Abtrae una conexion a la base de datos
-    private String usuario = " isc_ceim "; // usuario con permisos para conectarse a BD
+    private String usuario = "isc_ceim"; // usuario con permisos para conectarse a BD
     private String password = "/*S1p43BD*/"; // contrase�a del usuario que se puede conectar
     private String driver = "com.mysql.jdbc.Driver"; // Clase del Driver de jConnector
     //cadena de conxion a la base de datos por defecto
