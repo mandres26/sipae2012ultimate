@@ -10,7 +10,7 @@ public class ManejadorBaseDatos {
     private String password = "/*S1p43BD*/"; // contrase�a del usuario que se puede conectar
     private String driver = "com.mysql.jdbc.Driver"; // Clase del Driver de jConnector
     //cadena de conxion a la base de datos por defecto
-    private String basedatos = "jdbc:mysql://iscsas.net:3306/isc_sipae";
+    private String basedatos = "iscsas.net/isc_sipae";
     private static ManejadorBaseDatos instancia; // patron de dise�o singleton
     private Logger log = Logger.getLogger(Utilidades.ManejadorBaseDatos.
                                           class.getName());

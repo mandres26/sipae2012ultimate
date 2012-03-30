@@ -1,0 +1,521 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+font-family: "../css/Antipasto.ttf";
+font-size: 12px;
+line-height: 17px;
+color: #000000;
+font-weight: bold;
+
+
+font-weight: bold;
+}
+iframe{
+    margin-right: 0px;
+    margin: 0px;
+    width: 824px;
+    height:600px;
+    border: 1px;
+    background: #ffffff;
+    overflow:auto;
+    float: right;
+ 
+}
+#iframele{
+    margin-right: 0px;
+    margin: 0px;
+    width: 1030px;
+    height: 575px;
+    background: #ffffff;
+    float: left;
+    overflow:auto;
+   
+}
+form{
+
+    margin:0px;
+    margin-left: 0px;
+    float:left;
+    height: 600px;
+    width: 200px;
+   
+   
+
+}
+#formb{
+     margin:0px;
+     margin-left: 0px;
+     float:left;
+     height: 600px;
+     width: 200px;
+     border: 1px solid #ADC276  ;
+   
+}
+
+#formi{
+
+    margin:0px;
+    margin-left:30px;
+    float:left;
+    height: 20px;
+    width: 400px;
+    
+    
+}
+#formle{
+
+    margin:0px;
+    margin-left:0px;
+    float:left;
+    height: 30px;
+    width: 500px;
+   
+    
+
+
+
+}
+#Autenticacion{
+    margin:0px;
+    margin-left: 0px;
+    float:left;
+    height: 30px;
+    width: 1000px;
+    color: #ffffff;
+    background: #000000;
+    border-radius:5px;
+
+}
+#toolbar {
+    width: auto;
+    background: url(../Imagenes/toolbar_l.png) 0 0 no-repeat;
+    clear: both;
+    font-size: 85%;
+    line-height: 200%;
+    color: #141414;
+    float:right;
+}
+#mod-line {
+    margin: 0px 0px 8px 0px;
+    padding:0px 0px 6px 0px;
+    background: url(../Imagenes/module_line_header.png) 0 100% repeat-x;
+    
+}
+#toolbar1 {
+    background: url(../Imagenes/toolbar_r.png) 100% 0 no-repeat;
+    padding: 0px 10px 0px 10px;
+}
+
+#toolbar2 {
+    background: url(../Imagenes/toolbar_m.png) 0 0 repeat-x;
+    height: 30px;
+    padding: 10px 130px 0px 10px;
+    overflow: hidden;
+    border-radius:5px;
+    width:300px;
+}
+
+#search {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 12;
+    width: 120px;
+}
+
+#date {
+    margin: 0px 30px 0px 0px;
+    float: right;
+    color: #646464;
+    font-style: italic;
+}
+a {
+text-decoration: none;
+color: #515151;
+}
+a:hover {
+text-decoration: underline;
+color: #C3D9FF;
+}
+#estcat{
+    float: left;
+    width: 200px;
+    border_radius:5px;
+}
+
+#wrap {
+position: relative;
+margin: 0px;
+margin-left:40px;
+width: 900px;
+height:500px;
+border: 0px solid #e7e2d7;
+border-radius:5px;
+
+}
+#wrap8 {
+position: relative;
+border: 1px solid #e0f3fa;
+width: 1000px;
+height: auto;
+}
+#wrap2 {
+position: relative;
+margin: 20px auto;
+width: 800px;
+height:700px;
+border: 2px solid #e7e2d7;
+border-radius:5px;
+
+}
+#wrap3 {
+position: relative;
+background: #ffffff;
+margin: 40px auto;
+width: 800px;
+height: 500px;
+border: 1px solid #ADC276;
+border-radius:5px;
+
+}
+#wrap4 {
+position: relative;
+background: #ffffff;
+margin: 0px;
+width: 1030px;
+height: 600px;
+border: 1px solid #ADC276;
+border-radius:5px;
+
+}
+#header {
+    /* cambiar la height por 300px para cuando este la imagen de fondo lista*/
+height: 100px;
+width: 800px;
+background: #ffffff ;
+border:0px solid #e7e2d7;
+border-radius:5px;
+-webkit-border-radius:.8em;
+-moz-border-radius:.8em;
+
+}
+#top {
+
+
+margin:20px;
+margin-left:20px;
+width: 800px;
+position: relative;
+padding: 0 40px;
+height: 90px;
+
+}
+#top2 {
+
+background: #e7e2d7;
+border:1px solid #e7e2d7;
+border-radius:0px;
+-webkit-border-radius:.8em;
+-moz-border-radius:.8em;
+margin: 0px;
+margin-left:0px;
+width: 100px;
+position: relative;
+padding: 0 40px;
+height: 450px;
+
+}
+#top h1{
+padding: 20px 0 0 0;
+color: #000000;
+font-family: "../css/Antipasto.ttf";
+font-size:80px;
+line-height: 120px;
+font-weight: bold;
+letter-spacing: 0;
+
+text-shadow: 0 1px 5px  #ADC276;
+margin-left: 100px;
+}
+h8 {
+margin: 0px;
+color: #000000;
+font-size: 12px;
+text-decoration: none;
+font-weight:bold;
+letter-spacing: 2px;
+margin-left: 30px;
+}
+
+#imagen{
+position: absolute;
+left: 10px;
+top: 10px;
+font-size: 0;
+}
+#imagenb{
+position: absolute;
+left: 10px;
+top: 300px;
+font-size: 0;
+}
+#imageni{
+position: absolute;
+left: 350px;
+top: 50px;
+font-size: 0;
+}
+#header2 {
+    /* cambiar la height por 300px para cuando este la imagen de fondo lista*/
+height: 70px;
+background: #FE2E2E url(../Imagenes/EscudoCEIM.jpg) no-repeat;
+
+}
+h1 { 
+font-size: 20px;
+letter-spacing: -1px;
+padding: 25px 0 0 20px;
+color: #18268E;
+font-weight: bold;
+
+}
+
+
+h2 {
+font-size: 12px;
+color: #ffffff;
+padding: 0px;
+margin-left: 0px;
+letter-spacing: -1px;
+font-weight: bold;
+
+}
+input{
+	font-family:"Antipasto";
+	font-size:90%;
+	font-weight:bold;
+	color:#000000;
+	border:1px solid #000000;
+	border-radius:7px;
+	-webkit-border-radius:.5em;
+	-moz-border-radius:.5em;
+	padding:2px 4px;
+	width:90px;
+	background: #ffffff;
+
+
+}
+
+#menu {
+height: 40px;
+margin: 0px;
+margin-left: 0px;
+position: relative;
+line-height: 30px;
+background: #15c;
+
+
+}
+#menu2 {
+height: 30px;
+line-height: 30px;
+background: #e0f3fa url(images/menu.jpg) no-repeat;
+}
+#menu ul {
+list-style-type: none;
+padding-left: 30px;
+color:#FE2E2E;
+}
+#menu ul li {
+display: block;
+float: left;
+
+}
+#menu ul li a {
+padding: 0px 10px 0 0;
+text-decoration: none;
+background:#ADC276;
+font-size: 15px;
+font-weight: 70;
+padding-left: 10px;
+height: 26px;
+line-height: 26px;
+border-radius:5px;
+-webkit-border-radius:.8em;
+-moz-border-radius:.8em;
+
+}
+
+/*link presionado..*/
+#menu ul li a:hover {
+color: #000#e0f3fa;
+text-decoration: none;
+background:-webkit-linear-gradient(#FAFAFA, 	#e0f3fa);
+background: -moz-linear-gradient(#FAFAFA, 	 #e0f3fa);
+}
+
+#inicio {
+	-webkit-box-shadow: 2px 1px 2px rgba(255,   255, 255, 0.5) inset;
+ 	-moz-box-shadow: 2px 1px 0px rgba(255, 255,  255, 0.5) inset;
+  	background:-webkit-linear-gradient(#FAFAFA, #A4A4A4);
+	background: -moz-linear-gradient(#FAFAFA, #A4A4A4);
+        border: 1px solid #ffffff;
+  	-moz-border-radius:2px;
+  	-webkit-border-radius: 2px;
+ 	border-radius: 0px;
+	float:right;
+	width:222px;
+	text-align:left;
+     	height: 240px;
+	margin-right:0px;
+
+}
+#left-pestanas {
+	-webkit-box-shadow: 2px 1px 2px rgba(255,   255, 255, 0.5) inset;
+ 	-moz-box-shadow: 2px 1px 0px rgba(255, 255,  255, 0.5) inset;
+  	background:-webkit-linear-gradient(#FAFAFA, #A4A4A4);
+	background: -moz-linear-gradient(#FAFAFA, #A4A4A4);
+        border: 1px solid #ffffff;
+  	-moz-border-radius:2px;
+  	-webkit-border-radius: 2px;
+ 	border-radius: 0px;
+	float:left;
+	width:200px;
+	text-align:left;
+     	height: 450px;
+	margin-left:0px;
+        
+
+}
+ h6{    font-size: 25px;
+        background:#FE2E2E url(../Imagenes/fondocab.png)0px;
+        behavior:url(border-radius.htc);
+	color:#ffffff;
+        height: 10px;
+        width: 330px;
+        padding-left: 10px;
+	padding:0 30px 0 0;
+        text-align: center;
+        margin:10px;
+	-moz-border-radius:.8em;
+  	-webkit-border-radius: .8em;
+	border-radius:4px;
+	
+
+}
+#content {
+background:#ffffff;
+padding:0px;
+height: 600px;
+}
+#content2{
+background:#ffffff;
+width: 800px;
+
+}
+.right {
+float: right;
+width: 600px;
+text-align: justify;
+padding-top: 20px;
+}
+.right h2 {
+font-size: 18px;
+font-weight: 100;
+padding-left: 10px;
+height: 26px;
+line-height: 26px;
+border-radius:5px;
+-webkit-border-radius:.8em;
+-moz-border-radius:.8em;
+background:#FE2E2E;
+
+}
+.right h2 a {
+text-decoration: none;
+color: #fff;
+background: #FE2E2E;
+}
+.right h2 a:hover {
+color: #111;
+}
+
+.left {
+float: left;
+width: 800px;
+height: 305px;
+left:40px;
+border-radius:5px;
+behavior:url(border-radius.htc);
+background:#ffffff;
+border-radius:0px;
+-webkit-border-radius:.0em;
+-moz-border-radius:.0em;
+}
+.left h2 {
+margin: 10px 0 0 0;
+padding-left: 10px;
+height: 26px;
+color: #ffffff;
+line-height: 26px;
+border-radius:5px;
+background: #FE2E2E; 
+font-size: 18px;
+-webkit-border-radius:.8em;
+-moz-border-radius:.8em;
+
+}
+.left ul {
+padding: 10px 0 15px 20px;
+color: #C3D9FF;
+}
+.left ul li a {
+text-decoration: none;
+font-weight: 600;
+}
+.left ul li a:hover {
+
+}
+
+
+.articles { padding: 10px; }
+
+#buttom {
+background :#ffffff url(../Imagenes/fondocat.jpg) no-repeat; ;
+color: #ffffff;
+width: 80px;
+margin-left: 0px;
+border-radius:5px;
+-webkit-border-radius:.8em;
+-moz-border-radius:.8em;
+}
+
+#footer {
+text-align: center;
+font-size: 11px;
+color: #aaa;
+margin-top: 20px;
+-moz-border-radius:.8em;
+-webkit-border-radius: .8em;
+border-radius:4px;
+}
+#footer a { color: #aaa; }
+#footer a:hover { color: #111; }
+
+
+
+/*Bordes */
+.t {background: -webkit-linear-gradient(#FAFAFA, 	#A4A4A4);
+   background: -moz-linear-gradient(#FAFAFA, 	#A4A4A4);
+  background:#FE2E2E;
+}
+.b {background:url(images/bordes/dot.gif) 0 100% repeat-x}
+.l {background:url(images/bordes/dot.gif) 0 0 repeat-y}
+.r {background:url(images/bordes/dot.gif) 100% 0 repeat-y}
+.bl {background:url(images/bordes/bl.gif) 0 100% no-repeat}
+.br {background:url(images/bordes/br.gif) 100% 100% no-repeat}
+.tl {background:url(images/bordes/tl.gif) 0 0 no-repeat}
+.tr {background:url(images/bordes/tr.gif) 100% 0 no-repeat; padding:1px 20px} 

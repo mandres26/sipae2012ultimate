@@ -94,7 +94,7 @@ function cerrarPopup(pid)
     <div style="display: block;" id="slidepanel">
 <div class="topbox"><h2>Manual de Usuario</h2>
     <ul>
-        <a href="#"><li>Manual Administrador</li></a>
+    <a href="#"><li>Manual Administrador</li></a>
     <a href="#"><li>Manual Docente</li></a>
     <a href="#"><li>Manual Acudiente</li></a>
     </ul>
