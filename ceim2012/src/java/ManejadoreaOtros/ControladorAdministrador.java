@@ -31,7 +31,7 @@ public static boolean existeAdministrador(String usuario, String pass) throws SQ
          boolean exist = false;
      try {
          pst = con.prepareStatement("select * from Administrador where var_usuario=? and var_pass=?");
-         pst.setString(1, usuario.trim());
+         pst.setString(1, usuario);
          pst.setString(2, pass);
 
          rs = pst.executeQuery();

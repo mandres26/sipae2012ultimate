@@ -159,8 +159,9 @@ border-radius:5px;
 #wrap8 {
 position: relative;
 border: 1px solid #e0f3fa;
-width: 1000px;
+width: 200px;
 height: auto;
+
 }
 #wrap2 {
 position: relative;
@@ -265,8 +266,9 @@ font-size: 0;
 #imageni{
 position: absolute;
 left: 350px;
-top: 50px;
+top: 40px;
 font-size: 0;
+margin: 80px;
 }
 #header2 {
     /* cambiar la height por 300px para cuando este la imagen de fondo lista*/
@@ -506,16 +508,3 @@ border-radius:4px;
 #footer a:hover { color: #111; }
 
 
-
-/*Bordes */
-.t {background: -webkit-linear-gradient(#FAFAFA, 	#A4A4A4);
-   background: -moz-linear-gradient(#FAFAFA, 	#A4A4A4);
-  background:#FE2E2E;
-}
-.b {background:url(images/bordes/dot.gif) 0 100% repeat-x}
-.l {background:url(images/bordes/dot.gif) 0 0 repeat-y}
-.r {background:url(images/bordes/dot.gif) 100% 0 repeat-y}
-.bl {background:url(images/bordes/bl.gif) 0 100% no-repeat}
-.br {background:url(images/bordes/br.gif) 100% 100% no-repeat}
-.tl {background:url(images/bordes/tl.gif) 0 0 no-repeat}
-.tr {background:url(images/bordes/tr.gif) 100% 0 no-repeat; padding:1px 20px} 

@@ -20,19 +20,19 @@
 .ddsmoothmenu ul li a {
 	display: block;
 	position: relative;
-	width: 100px;
-	padding: 65px 0 10px;
+	width: 150px;
+	padding: 10px 0 0px;
 	margin: 0 1px 0 0;
 	font-size: 14px;
 	color: #999;	
-	text-align: center;
+	text-align: left;
 	text-decoration: none;
 	font-weight: 400;
 	outline: none;
 	border: none;
 }
 
-* html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+* html .ddsmoothmenu ul li a{ /*999 IE6 hack to get sub menu links to behave correctly*/
 display: inline-block;
 }
 
