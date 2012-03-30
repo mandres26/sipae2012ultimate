@@ -35,7 +35,6 @@
 </style>
 <!--[if lte IE 6]><style type="text/css">#freecssfooter{position:absolute;}</style><![endif]-->
 <script src="js/bsa.js" async="" type="text/javascript"></script>
-<script async="async" src="Free%20CSS%20_%20Free%20CSS%20Templates%20_%20Demo%20of%20the%20CSS%20Template%20Educational_files/s_b893e54e42ad5b76e7b252f59be18e67.htm" id="_bsap_js_b893e54e42ad5b76e7b252f59be18e67" type="text/javascript"></script>
 
 <script type="text/javascript">
 
@@ -67,14 +66,14 @@ ddsmoothmenu.init({
             if(tipo.equalsIgnoreCase("1")){
                 //regresar a pagina
                 %>
-        <jsp:forward page="acudiente.jsp"></jsp:forward>
+                <jsp:forward page="Vistas/Matricula/acudiente.jsp"></jsp:forward>
                 
         <%
             }if(tipo.equalsIgnoreCase("2")){%>
              <jsp:forward page="docenteVista.jsp"></jsp:forward>
             <%
             }if(tipo.equalsIgnoreCase("3")){%>
-             <jsp:forward page="GestionAdministrador.jsp"></jsp:forward>
+            <jsp:forward page="GestionAdministrador.jsp"></jsp:forward>
             <%
         }
         }
@@ -136,6 +135,7 @@ ddsmoothmenu.init({
                   request.getSession().setAttribute("info", "");
                 }
             %> 
+            
         </form>
       </div>
       <br class="clear">
@@ -192,7 +192,7 @@ ddsmoothmenu.init({
               	<li style="z-index: 100; "><a href="#" class="">Calendario Academico</a>
                 	
                 </li>
-              	<li><a href="http://www.templatemo.com/templates/templatemo_281_chrome/contact.html">Contact</a></li>
+              	<li><a href="#">Contact</a></li>
             </ul>
             <br style="clear: left">
         </div> <!-- end of templatemo_menu -->
