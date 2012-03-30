@@ -8,6 +8,8 @@ contraseña: /*S1p43BD*/
 la url de coneccion deberia ser esta para sqlyog la ultilizan asi: iscsas.net/isc_sipae
 
 
+desde netbeans:jdbc:mysql://iscsas.net/isc_sipae
+
 Cualquier duda me pueden escribir al correo o al grupo ceim, 
 
 ==================================================
