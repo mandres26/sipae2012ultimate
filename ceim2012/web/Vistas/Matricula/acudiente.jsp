@@ -5,14 +5,6 @@
 --%>
 
 
-
-
-
-
-
-
-
-
 <%@page import="ManejadorHorario.ControlCurso"%>
 <%@page import="Conceptos.Curso"%>
 <%@page import="java.util.List"%>
@@ -61,7 +53,7 @@
          <%
          String usuario=(String)request.getSession().getAttribute("usuario");
          String pass=(String)request.getSession().getAttribute("pass");
-         Acudiente a=ControladorAcudiente.isUsurioPass(usuario, pass);
+         Acudiente a=ControladorAcudiente.isUsuarioPass(usuario, pass);
     
       
      %>
@@ -87,7 +79,7 @@
     <body>
 <div class="borde2">
 <div class="espacio2">       
-       <div id="identificacion"><%=a.getVar_nombre_acudiente().toUpperCase()+" "+a.getVar_apellido_acudiente().toUpperCase() %>(<a href="cerrarSession.jsp">Cerrar sesion</a>)</div>
+       <div id="identificacion"><%=a.getVar_nombre_acudiente().toUpperCase()+" "+a.getVar_apellido_acudiente().toUpperCase() %>(<a href="../../cerrarSession.jsp">Cerrar sesion</a>)</div>
        <!-- Identificacion  -->
 <div id="apDiv2"></div>
 <div id="header">
@@ -120,7 +112,10 @@
 %>
                 </div>
             </div>
-            
+           <center><h2>Listado de Estudiante</h2></center>
+            <br/>
+            <iframe  name="zona1" style="width:800px; height:auto; overflow: auto;" /><!--division que muestra el listado, de los estudinates--></iframe>
+                       
             <!-- incripcion de estudiante  -->
             
              
@@ -188,10 +183,7 @@
                </form>
                   <!-- este es el listado  --> 
             </div>
-            <br/><center><h2>Listado de Estudiante</h2></center>
             <br/>
-            <iframe  name="zona1" style="width:800px; height:auto; overflow: auto;" /><!--division que muestra el listado, de los estudinates--></iframe>
-                      
         </div>
 </div>
 </div>

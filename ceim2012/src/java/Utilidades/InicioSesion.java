@@ -8,6 +8,7 @@ package Utilidades;
 
 
 import Conceptos.Acudiente;
+import Conceptos.Docente;
 import ManejadorMatriculas.ControlMatricula;
 import ManejadoreaOtros.ControladorAdministrador;
 import ManejadorMatriculas.ControladorAcudiente;
@@ -45,7 +46,7 @@ public class InicioSesion extends HttpServlet {
             String pass=request.getParameter("pass");
              String tipo=request.getParameter("tipo");
              if(tipo.equalsIgnoreCase("1")){
-                 Acudiente a=ControladorAcudiente.isUsurioPass(usuario, pass);
+                 Acudiente a=ControladorAcudiente.isUsuarioPass(usuario, pass);
                  if(a!=null){
                      request.getSession().setAttribute("usuario", usuario);
                      request.getSession().setAttribute("pass", pass);
@@ -55,17 +56,6 @@ public class InicioSesion extends HttpServlet {
                   usuarioNoEncontrado(request,response); 
                  }
              }else if(tipo.equalsIgnoreCase("3")){
-              
-                 if(ControladorAdministrador.existeAdministrador(usuario, pass)){
-                     request.getSession().setAttribute("usuario", usuario);
-                     request.getSession().setAttribute("pass", pass);
-                     request.getSession().setAttribute("tipo", tipo);
-                     response.sendRedirect("GestionAdministrador.jsp");
-                 }else{
-                 usuarioNoEncontrado(request,response);
-                 }
-                 
-                 }else if(tipo.equalsIgnoreCase("2")){
                      
                      if(ControlMatricula.existeEstudiantemat(usuario, pass)){
                         
@@ -73,19 +63,19 @@ public class InicioSesion extends HttpServlet {
                      request.getSession().setAttribute("usuario", usuario);
                      request.getSession().setAttribute("pass", pass);
                      request.getSession().setAttribute("tipo", tipo);
-                     response.sendRedirect("docenteVista.jsp");
+                     response.sendRedirect("Vistas/Evaluacion/GestionDocente.jsp");
                      }else{
                    usuarioNoEncontrado(request,response); 
                  }
-                  }else if(tipo.equalsIgnoreCase("4")){
+                  }else if(tipo.equalsIgnoreCase("2")){
                      
-                     if(ControlDocente.existeDocente(usuario, pass)){
+                     Docente doc=ControlDocente.isUsuarioPass(usuario, pass);
                         
-                     
+                     if(doc!=null){
                      request.getSession().setAttribute("usuario", usuario);
                      request.getSession().setAttribute("pass", pass);
                      request.getSession().setAttribute("tipo", tipo);
-                     response.sendRedirect("docenteVista.jsp");
+                     response.sendRedirect("Vistas/Evaluacion/GestionDocente.jsp");
                      }else{
                    usuarioNoEncontrado(request,response); 
                  }

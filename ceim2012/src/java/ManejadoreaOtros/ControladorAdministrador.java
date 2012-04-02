@@ -5,6 +5,7 @@
 package ManejadoreaOtros;
 
 
+import Conceptos.Administrador;
 import Utilidades.ManejadorBaseDatos;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -46,6 +47,35 @@ public static boolean existeAdministrador(String usuario, String pass) throws SQ
            pst.close();
          }
           return exist;
+    }
+}
+public static Administrador consultarAdmin(String user) throws SQLException, Exception {
+    mbd.conectar();
+    con=mbd.getConexion();
+   
+      if (user==null ) {
+          throw new SQLException("No hay elemento clave de la clase Administrador");
+     }
+         ResultSet rs = null;
+         PreparedStatement pst = null;
+         Administrador admin = null;
+     try {
+         pst = con.prepareStatement("select * from administrador  where var_usuario = ? ");
+         pst.setString(1, user);
+          
+         rs = pst.executeQuery();
+         while(rs.next()) {
+
+             admin = admin.load(rs);
+         }
+    } finally {
+         if (rs != null) {
+            rs.close();
+         }
+         if (pst != null) {
+           pst.close();
+         }
+          return admin;
     }
 }
 }

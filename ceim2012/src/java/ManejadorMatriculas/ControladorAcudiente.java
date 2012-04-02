@@ -83,7 +83,7 @@ public static boolean existeAcudiente(String id) throws SQLException, Exception 
     }
 }
 
-public static Acudiente  isUsurioPass(String usuario, String contrasena) throws Exception{
+public static Acudiente  isUsuarioPass(String usuario, String contrasena) throws Exception{
      mbd.conectar();
     con=mbd.getConexion();
       if (usuario == null) {

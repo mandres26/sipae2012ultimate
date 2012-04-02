@@ -195,7 +195,7 @@ public class ControlDocente {
          PreparedStatement pst = null;
          boolean exist = false;
      try {
-         pst = con.prepareStatement("select * from Docente where user=? and pass=?");
+         pst = con.prepareStatement("select * from Docente where var_usuario_docente=? and var_pass_docente=?");
          pst.setString(1, usuario.trim());
          pst.setString(2, pass);
 
@@ -212,5 +212,35 @@ public class ControlDocente {
          }
           return exist;
     }
+}
+    public static Docente  isUsuarioPass(String usuario, String contrasena) throws Exception{
+     mbd.conectar();
+    con=mbd.getConexion();
+      if (usuario == null) {
+          throw new SQLException("No hay elemento clave de la clase Docente");
+     }
+         ResultSet rs = null;
+         PreparedStatement pst = null;
+         Docente doc= null;
+     try {
+         pst = con.prepareStatement("select * from Docente where var_usuario_docente = ? and var_pass_docente=?");
+         pst.setString(1, usuario.trim());
+         pst.setString(2, contrasena.trim());
+
+         rs = pst.executeQuery();
+         while(rs.next()) {
+            
+            doc=Docente.load(rs);
+         }
+    } finally {
+         if (rs != null) {
+            rs.close();
+         }
+         if (pst != null) {
+           pst.close();
+         }
+          return doc;
+    }
+    
 }
 }

@@ -49,6 +49,26 @@ public class ControladorLogroActividad {
     }
 }
     
-    
+  public static void registrarLogroAct(LogroActividad logroact) throws SQLException, Exception {
+    mbd.conectar();
+    con=mbd.getConexion();
+     if (con == null ) {
+          throw new SQLException("no hay conexion" );
+     }
+     PreparedStatement pst = null;//hacer nula la consulata.....
+     try {
+          pst = con.prepareStatement("Insert Into LogroActividad values(?,?,?)");
+          pst.setString(1,logroact.getVar_codigo_logro().getVar_codigo_logro());
+          pst.setString(2,logroact.getVar_codigo_actividad().getVar_codigo_actividad());
+          pst.setString(3,logroact.getVar_consecutivo());
+          
+
+          pst.executeUpdate();
+    }finally {
+        if (pst != null) {
+             pst.close();
+        }
+   }
+}  
     
 }

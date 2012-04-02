@@ -19,14 +19,14 @@ public class Actividades {
     private String var_nombre_actividad;    
     private String var_porcentaje_actividad;
     private String var_periodo_actividad;
-    private Date var_fecha_creacion_actividad;
-    private Date var_fecha_ejecucion_actividad;   
+    private String var_fecha_creacion_actividad;
+    private String var_fecha_ejecucion_actividad;   
     private Asignatura asignatura;
-    private boolean var_estado;
+    private String var_estado;
     private String var_tema;
     private String var_descripcion;
     
-    public Actividades(String var_codigo_actividad, String var_nombre_actividad, String var_porcentaje_actividad, String var_periodo_actividad, Date var_fecha_creacion_actividad, Date var_fecha_ejecucion_actividad, Asignatura var_id_asignatura, boolean var_estado, String var_tema, String var_descripcion) {
+    public Actividades(String var_codigo_actividad, String var_nombre_actividad, String var_porcentaje_actividad, String var_periodo_actividad, String var_fecha_creacion_actividad, String var_fecha_ejecucion_actividad, Asignatura var_id_asignatura, String var_estado, String var_tema, String var_descripcion) {
         this.var_codigo_actividad = var_codigo_actividad;
         this.var_nombre_actividad = var_nombre_actividad;
         this.var_porcentaje_actividad = var_porcentaje_actividad;
@@ -48,10 +48,10 @@ public class Actividades {
          acti.setVar_nombre_actividad(rs.getString(2));
          acti.setVar_periodo_actividad(rs.getString(3));
          acti.setVar_porcentaje_actividad(rs.getString(4));
-         acti.setVar_fecha_creacion_actividad(rs.getDate(5));
-         acti.setVar_fecha_ejecucion_actividad(rs.getDate(6));
+         acti.setVar_fecha_creacion_actividad(rs.getString(5));
+         acti.setVar_fecha_ejecucion_actividad(rs.getString(6));
          acti.setVar_asignatura(ControlAsignatura.consultarAsignatura(rs.getString(7)));
-         acti.setVar_estado(rs.getBoolean(8));
+         acti.setVar_estado(rs.getString(8));
          acti.setVar_tema(rs.getString(9));
          acti.setVar_descripcion(rs.getString(10));
          
@@ -67,19 +67,19 @@ public class Actividades {
     }
 
     
-    public Date getVar_fecha_creacion_actividad() {
+    public String getVar_fecha_creacion_actividad() {
         return var_fecha_creacion_actividad;
     }
 
-    public void setVar_fecha_creacion_actividad(Date var_fecha_creacion_actividad) {
+    public void setVar_fecha_creacion_actividad(String var_fecha_creacion_actividad) {
         this.var_fecha_creacion_actividad = var_fecha_creacion_actividad;
     }
 
-    public Date getVar_fecha_ejecucion_actividad() {
+    public String getVar_fecha_ejecucion_actividad() {
         return var_fecha_ejecucion_actividad;
     }
 
-    public void setVar_fecha_ejecucion_actividad(Date var_fecha_ejecucion_actividad) {
+    public void setVar_fecha_ejecucion_actividad(String var_fecha_ejecucion_actividad) {
         this.var_fecha_ejecucion_actividad = var_fecha_ejecucion_actividad;
     }
 
@@ -130,14 +130,14 @@ public class Actividades {
      * @return the estado
      */
    
-    public boolean isVar_estado() {
+    public String getVar_estado() {
         return var_estado;
     }
 
     /**
      * @param var_estado the var_estado to set
      */
-    public void setVar_estado(boolean var_estado) {
+    public void setVar_estado(String var_estado) {
         this.var_estado = var_estado;
     }
 

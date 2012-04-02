@@ -88,15 +88,18 @@ public static void registrarActividades(Actividades actividades) throws SQLExcep
      }
      PreparedStatement pst = null;//hacer nula la consulata.....
      try {
-          pst = con.prepareStatement("Insert Into Actividades values(?,?,?,?,?,?,?,?)");
+          pst = con.prepareStatement("Insert Into Actividades values(?,?,?,?,?,?,?,?,?,?)");
           pst.setString(1,actividades.getVar_codigo_actividad());
-          pst.setString(2,actividades.getVar_asignatura().getVar_codigo_asignatura());
-          //pst.setString(3,actividades.getVar_fecha_ejecucion_actividad());
-          //pst.setBoolean(4,actividades.isEjecutada());
-          //pst.setDouble(5,actividades.getPorcentaje());
-          //pst.setInt(6,actividades.getPeriodo());
-          //pst.setString(7,actividades.getTema());
-          //pst.setString(8,actividades.getDescripcion());
+          pst.setString(2,actividades.getVar_nombre_actividad());
+          pst.setString(3,actividades.getVar_porcentaje_actividad());
+          pst.setString(4,actividades.getVar_periodo_actividad());
+          pst.setString(5,actividades.getVar_fecha_creacion_actividad());
+          pst.setString(6,actividades.getVar_fecha_ejecucion_actividad());
+          pst.setString(7,actividades.getVar_asignatura().getVar_codigo_asignatura());
+          pst.setString(8,actividades.getVar_estado());
+          pst.setString(9,actividades.getVar_tema());
+          pst.setString(10,actividades.getVar_descripcion());
+         
 
           pst.executeUpdate();
     }finally {
@@ -115,15 +118,18 @@ public static boolean ActualizarActividad (Actividades actividades, String codac
        boolean res = false;
        try {
          pst = con.prepareStatement("Update Actividades set  codActividades = ? , codAsignatura = ?,  fecha=?, ejecutada=?, porcentaje=?, periodo = ?, tema=?, descripcion=?, where codActividades = ?" ) ;
-         /*/ pst.setInt(1,actividades.getCodactividad());
-          pst.setInt(2,actividades.getAsignatura().getCodAsignatura());
-          pst.setString(3,actividades.getFecha());
-          pst.setBoolean(4,actividades.isEjecutada());
-          pst.setDouble(5,actividades.getPorcentaje());
-          pst.setInt(6,actividades.getPeriodo());
-          pst.setString(7,actividades.getTema());
-          pst.setString(8,actividades.getDescripcion());
-          pst.setInt(9 , codacti);*/
+         pst.setString(1,actividades.getVar_codigo_actividad());
+          pst.setString(2,actividades.getVar_nombre_actividad());
+          pst.setString(3,actividades.getVar_porcentaje_actividad());
+          pst.setString(4,actividades.getVar_periodo_actividad());
+          pst.setString(5,actividades.getVar_fecha_creacion_actividad());
+          pst.setString(6,actividades.getVar_fecha_ejecucion_actividad());
+          pst.setString(7,actividades.getVar_asignatura().getVar_codigo_asignatura());
+          pst.setString(8,actividades.getVar_estado());
+          pst.setString(9,actividades.getVar_tema());
+          pst.setString(10,actividades.getVar_descripcion());
+         
+          
          int r = pst.executeUpdate();
        if (r != 0) {
           res = true;
