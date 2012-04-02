@@ -70,14 +70,11 @@ ddsmoothmenu.init({
                 
         <%
             }if(tipo.equalsIgnoreCase("2")){%>
-             <jsp:forward page="docenteVista.jsp"></jsp:forward>
+            <jsp:forward page="Vistas/Evaluacion/GestionDocente.jsp"></jsp:forward>
             <%
-            }if(tipo.equalsIgnoreCase("3")){%>
-            <jsp:forward page="GestionAdministrador.jsp"></jsp:forward>
-            <%
+            }
         }
-        }
-            
+                   
         %>
 <body id="top" >
 <div class="borde">
@@ -114,10 +111,10 @@ ddsmoothmenu.init({
 		<select name="tipo" id="select">
                     <option value="1">Acudiente</option>
    		    <option value="2">Docente</option>
-                    <option value="3">Administrativo</option>
+                   
   		</select>
         
-
+            
           <label for="remember">
           <input class="checkbox" name="remember" id="remember" checked="checked" type="checkbox">
           Recordarme</label>
@@ -137,6 +134,7 @@ ddsmoothmenu.init({
             %> 
             
         </form>
+            <a href="Administrador.jsp" style="background: none">Administrador</a>
       </div>
       <br class="clear">
     </div>

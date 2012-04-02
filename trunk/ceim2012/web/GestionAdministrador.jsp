@@ -8,8 +8,18 @@
 <%@page errorPage = "ErrorPage.jsp" %>
 <%@ page session="true" %>
 <%
-String usuario=(String)request.getSession().getAttribute("usuario");
-String pass=(String)request.getSession().getAttribute("pass");
+String usuario = "";
+HttpSession sesionOk = request.getSession();
+if (sesionOk.getAttribute("username") == null) {
+%>
+<jsp:forward page="Administrador.jsp">
+<jsp:param name="error" value="Es
+obligatorio identificarse"/>
+</jsp:forward>
+<%
+} else {
+usuario = (String)sesionOk.getAttribute("username");
+}
 %>
 <!DOCTYPE html>
 <html>
