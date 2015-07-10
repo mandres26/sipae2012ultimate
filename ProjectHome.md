@@ -1,0 +1,1 @@
+Este Software tiene como objetivo la administracion y gestion academica de la institucion CEIM
